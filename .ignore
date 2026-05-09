@@ -1,5 +1,5 @@
 .venv/
-venvhunter/
+/venvhunter/
 .tmp-tests/
 .ui-preview/
 pytest-cache-files-*/
