@@ -1,0 +1,44 @@
+[project]
+name = "devcleaner"
+version = "0.1.0"
+description = "A safe Windows desktop app for finding and deleting large development cleanup folders."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "PySide6>=6.7,<7",
+]
+
+[project.scripts]
+devcleaner = "venvhunter.__main__:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2",
+    "ruff>=0.8",
+]
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [
+    ".git",
+    ".ruff_cache",
+    ".tmp-tests",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+    "venvhunter/Lib",
+    "venvhunter/Scripts",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "SIM", "RUF"]
+ignore = ["RUF012"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

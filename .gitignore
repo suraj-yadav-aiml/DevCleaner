@@ -1,0 +1,13 @@
+.venv/
+venvhunter/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+.ruff_cache/
+.tmp-tests/
+.ui-preview/
+.sandbox-write-check/
+dist/
+build/
+*.egg-info/
